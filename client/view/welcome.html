@@ -1,0 +1,23 @@
+<div ng-controller="patientCtrl" >
+<div class="topcoat-navigation-bar">
+    <div class="topcoat-navigation-bar__item center full">
+        <h1 class="topcoat-navigation-bar__title">ICU DashBoard</h1>
+    </div>
+</div>
+<div class="search-bar">
+    <input ng-model="query.firstName" type="search" placeholder="search" class="topcoat-search-input search-key">
+</div>
+<h4>Doctor in Charge :{{loginval.firstName}} {{loginval.lastName}}</h4>
+
+<div class="topcoat-list__container scroller" style="top:138px;">
+    <ul class="topcoat-list list">
+        <li ng-repeat="patient in listPatients | filter:query| orderBy:orderProp" class="topcoat-list__item">
+            <a ng-click="go(patient.pat_id)">
+<img ng-src="pics/{{patient.pat_id}}.jpg">
+                <p>{{patient.firstName}} {{patient.lastName}} </p>
+                
+            </a>
+        </li>
+    </ul>
+</div>
+</div>

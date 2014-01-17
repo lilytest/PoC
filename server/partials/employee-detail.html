@@ -1,0 +1,28 @@
+<div class="topcoat-navigation-bar">
+    <div class="topcoat-navigation-bar__item left quarter">
+        <a class="topcoat-icon-button--quiet back-button" href="" ng-click="back()">
+            <span class="topcoat-icon topcoat-icon--back"></span>
+        </a>
+    </div>
+    <div class="topcoat-navigation-bar__item center half">
+        <h1 class="topcoat-navigation-bar__title">Patient</h1>
+    </div>
+</div>
+
+<div class='details'>
+    <img ng-src="pics/{{patient.pic}}" class="patient-image">
+    <h1>{{patient.firstName}} {{patient.lastName}}</h1>
+    <h2>{{patient.title}}</h2>
+    <h2>{{patient.city}}</h2>
+    <div class="topcoat-list__container scroller">
+        <ul class="topcoat-list list actions">
+            <li class="topcoat-list__item" ng-show="patient.managerId"><a ng-click="go('patients/' + patient.managerId)"><p>View Manager</p><p>{{patient.managerName}}</p><div class="action-icon icon-manager"/></a></li>
+            <li class="topcoat-list__item" ng-show="patient.reports"><a ng-click="go('patients/' + patient.id + '/reports')"><p>View Direct Reports</p><p>{{patient.reports}}</p><div class="action-icon icon-reports"/></a></li>
+            <li class="topcoat-list__item" ng-show="patient.officePhone"><a href="tel:{{patient.officePhone}}"><p>Call Office</p><p>{{patient.officePhone}}</p><div class="action-icon icon-call"/></a></li>
+            <li class="topcoat-list__item" ng-show="patient.cellPhone"><a href="tel:{{patient.cellPhone}}"><p>Call Cell</p><p>{{patient.cellPhone}}</p><div class="action-icon icon-call"/></a></li>
+            <li class="topcoat-list__item" ng-show="patient.cellPhone"><a href="sms:{{patient.cellPhone}}"><p>SMS</p><p>{{patient.cellPhone}}</p><div class="action-icon icon-sms"/></a></li>
+            <li class="topcoat-list__item" ng-show="patient.email"><a href="mailto:{{patient.email}}"><p>Email</p><p>{{patient.email}}</p><div class="action-icon icon-mail"/></a></li>
+        </ul>
+    </div>
+</div>
+                

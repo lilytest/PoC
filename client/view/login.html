@@ -1,0 +1,20 @@
+
+<div ng-controller="AuthCtrl">
+
+	<section class="loginform cf">
+		
+			<ul>
+				<li>
+					<label for="uname">Username</label>
+					<input type="text" name="uname"  ng-model="user.uname" placeholder="username" required>
+				</li>
+				<li>
+					<label for="password">Password</label>
+					<input type="password" name="pass"  ng-model="user.pass" placeholder="password" required></li>
+				<li>
+					 <button type="submit" ng-click="Authenticate()">Login</button>
+				</li>
+			</ul>
+		
+	</section>
+</div>

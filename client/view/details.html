@@ -1,0 +1,131 @@
+<div class="topcoat-navigation-bar">
+    <div class="topcoat-navigation-bar__item left quarter">
+        <a class="topcoat-icon-button--quiet back-button" href="" ng-click="back()">
+            <span class="topcoat-icon topcoat-icon--back"></span>
+        </a>
+    </div>
+    <div class="topcoat-navigation-bar__item center half">
+        <h1 class="topcoat-navigation-bar__title">Patient DashBoard</h1>
+    </div>
+</div>
+
+<div class='details' align="left">
+<table border="1">
+<tr><td width="550">
+<table><tr><td>
+    <img ng-src="pics/{{getPatient.pat_id}}.jpg" class="user-image">
+	<h1>DoA:        :{{getPatient.doa}}</h1>
+    <h1>Name        :{{getPatient.firstName}} {{getPatient.lastName}} </h1>
+    <h2>Dr. in Charge :{{loginval.firstName}}</h2>
+	</td>
+	<td>							<table>
+										<tr>
+										<td>
+									<a target="_blank" rel="external"
+									title="Examination on Admission"
+									href="/ICUWeb/D/LoadPatientDocs?pid=${pid}&type=2"><img ng-src="images/examination-on-adm-s.png" /></a></td>
+									<td width="10"></td>
+										<td width="20"><a target="_blank" rel="external" title="Previous History"
+									href="/ICUWeb/D/LoadPatientDocs?pid=${pid}&type=3"><img
+										src="images/previous-history-s.png" /></a></td>
+									<td width="10"></td>
+										<td width="20"><a target="_blank" rel="external" title="Clinical Impressions"
+									href="/ICUWeb/D/LoadPatientDocs?pid=${pid}&type=4"><img
+										src="images/clinical-impressions-s.png" /></a></td>
+									<td width="10"></td>
+										<td width="20"><a target="_blank" rel="external" title="Nurses Notes"
+									href="/ICUWeb/D/LoadPatientDocs?pid=${pid}&type=5"><img
+										src="images/nurses-notes-s.png" /></a></td>
+										</tr>
+										<tr></tr>
+										<tr>
+										
+										<td width="20"><a target="_blank" rel="external" title="Lab"
+									href="lab.html"><img
+										src="images/labs-s.png" /></a></td>
+										<td></td>
+										<td width="20"><a target="_blank" rel="external" title="Allergies"
+									href="/ICUWeb/D/LoadPatientDocs?pid=${pid}&type=7"><img
+										src="images/allergies-s.png" /></a></td>
+										<td></td>
+										<td width="20"><a target="_blank" rel="external" title="Medication"
+									href="/ICUWeb/D/LoadPatientDocs?pid=${pid}&type=8"><img
+										src="images/medication-s.png" /></a></td>
+										<td></td>
+										<td width="20"><a target="_blank" rel="external" title="Case Sheet"
+									href="/ICUWeb/D/LoadPatientDocs?pid=${pid}&type=9"><img 
+										src="images/charts-s.png" /></a></td>
+										</tr>
+										</table>
+			</td>							
+	</tr>
+	</table>
+	
+	</td>
+	
+
+<td id="currentMedicine"  width="550" align="center" style="vertical-align: top;">
+					<div class="contentheading">Medication Prescribed</div>
+					<table cellpadding="5">
+						<tr>
+							<th align="left">Medication</th>
+							<th align="left">Dosage</th>
+						</tr>
+							</table>
+						
+								</td>
+								
+
+
+  
+ 
+  <td align="centers" width="550"  > 
+   <table>
+   <tr>Actual Medicine</tr>
+						<tr>
+							<th align="left">Drug</th>
+							<th align="left">Morning</th>
+							<th align="left">Noon</th>
+							<th align="left">Night</th>
+						</tr>
+						</table>
+						</td>
+					
+ 
+ </tr>
+ <tr><table border ="" width="1650">
+  <tr><th>   {{getVitals.heart_rate}}  </th> <th>    {{getVitals.respiration}}  </th><th>    {{getVitals.pressure}}   </th><th>    {{getVitals.temperature}}   </th><th>   {{getVitals.oxygen}}    </th></tr>
+ <tr><th>   HR   </th><th>   RR   </th> <th>   P   </th> <th>   T   </th>  <th>   SP02   </th><th>   RBS   </th><th>   Ketones   </th></tr>
+ 
+   
+ </table>
+ </tr>
+ <tr>
+ <table border="1" align="center"><td width="400" align="center"><table border="1" align="center">
+		<h4 align="center">GCS Score</h4>
+ 
+ <tr><td width="100"> Eye </td><td width="100">...</td></tr><br>
+ 
+ <tr><td>Speech </td><td> </td></tr><br>
+ 
+ <tr><td>Motor</td><td> </td></tr><br>
+ 
+ <tr><td>Total</td><td></td></tr><br> 
+ 
+ </table></td> ..<td width="400">
+ <h4 align="center">Pupil</h4>
+ <table border="1" align="center">
+<tr><th></th><th width="100">Shape</th><th width="100"> Reaction </th></tr>
+<tr><td>Left</td><td>..</td><td>...</td></tr>
+<tr><td>Right</td><td>..</td><td>..</td></tr>
+</table></td> ..<td width="850"></td>  </tr>
+ 
+ </tr>
+ <tr> <td width="400"><h4 align="center">AbnormalLabResults</h4>
+ <table border="1">
+ <tr><th>Test Parameter </th><th>Result </th><th> </th><th>Elapsed Time </th></tr>
+ <tr><td> </td><td> ..</td><td>.. </td><td> </td></tr>
+ </table>
+ </td> <td width="400"><td width="850"></td>  </tr>
+</table>
+</div>

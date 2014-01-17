@@ -1,0 +1,21 @@
+<div class="topcoat-navigation-bar">
+    <div class="topcoat-navigation-bar__item left quarter">
+        <a class="topcoat-icon-button--quiet back-button" href="" ng-click="back()">
+            <span class="topcoat-icon topcoat-icon--back"></span>
+        </a>
+    </div>
+    <div class="topcoat-navigation-bar__item center half">
+        <h1 class="topcoat-navigation-bar__title">Search</h1>
+    </div>
+</div>
+
+<div class="topcoat-list__container scroller" style="top:69px;">
+    <ul class="topcoat-list list">
+        <li ng-repeat="user in users | filter:query | orderBy:orderProp" class="topcoat-list__item">
+            <a ng-click="go('users' + user.id)">
+                <p>{{user.firstName}} {{user.lastName}}</p>
+                <p>{{user.dr}}</p>
+            </a>
+        </li>
+    </ul>
+</div>
